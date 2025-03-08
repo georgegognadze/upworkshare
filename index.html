@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upwork - Share feedback</title>
+    <link rel="icon" type="image/png" href="./assets/img/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  </head>
+  <body>
+    <div class="feedback-form" id="feedback-form">
+      <h2>Paste the client's feedback below:</h2>
+      <textarea
+        id="feedback"
+        class="feedback-form__input"
+        placeholder="Paste the client's feedback here..."
+      ></textarea>
+      <button class="feedback-form__submit-button" onclick="submitFeedback()" aria-label="Submit Feedback">
+        Submit Feedback
+      </button>
+    </div>
+    <div id="capture-container" class="container" style="display: none">
+      <div class="review__title">
+        <img
+          src="./assets/img/Completed.webp"
+          alt="Task completed successfully badge"
+        />
+      </div>
+      <div class="review__stars">
+        <div class="review__star"></div>
+        <div class="review__star"></div>
+        <div class="review__star"></div>
+        <div class="review__star"></div>
+        <div class="review__star"></div>
+      </div>
+      <p id="review-text" class="review__text"></p>
+      <p class="review__client">
+        <img src="./assets/img/Upwork-client.webp" alt="Upwork Client" />
+      </p>
+      <p class="review__upwork-logo">
+        <img src="./assets/img/Upwork-logo.webp" alt="Upwork Logo" />
+      </p>
+      <button class="save-button" id="save-button" onclick="saveImage()">
+        Save Feedback Image
+      </button>
+      <button class="back-button" id="back-button" onclick="goBack()">
+        Back to Form
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

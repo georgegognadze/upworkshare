@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("./assets/font/NeueMontreal-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #001e00;
+  color: white;
+  font-family: "Neue Montreal", sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: auto;
+  text-align: left;
+  flex-direction: column;
+  padding: 27px;
+}
+
+.container {
+  width: 1214px;
+  margin-top: 27px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.review__stars {
+  display: flex;
+  gap: 6px;
+  margin-top: 68px;
+  margin-bottom: 22px;
+}
+
+.review__star {
+  width: 50px;
+  height: 50px;
+  background-image: url("./assets/img/Star.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.review__text {
+  font-size: 2rem;
+  margin: 15px 0;
+  line-height: 1.3;
+  max-width: 95%;
+  letter-spacing: 1px;
+}
+
+.review__client {
+  font-family: "Neue Montreal";
+  font-size: 2.0625rem;
+  font-weight: bold;
+  margin-top: 33px;
+}
+
+.review__upwork-logo {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-top: 83px;
+}
+
+.save-button {
+  margin-top: 40px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #108a00;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.save-button:hover, .feedback-form__submit-button:hover {
+  background-color: #14a800;
+}
+
+.feedback-form__input {
+  margin: 20px 0;
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+  height: 300px;
+  resize: none;
+  border-radius: 8px;
+}
+
+.feedback-form__submit-button {
+  padding: 10px 20px;
+  background-color: #108a00;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+
+.feedback-form__submit-button:active, .save-button:active, .feedback-form__submit-button:active {
+  transform: scale(.96);
+}
+
+.back-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #fff;
+  color: #108a00;
+  border: 2px solid #108a00;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.back-button:hover {
+  background-color: #f9f9f9;
+  color: #14a800;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+  .review__text {
+    font-size: 1.5vw;
+    max-width: 100%;
+  }
+  .review__star {
+    width: 25px;
+    height: 25px;
+  }
+}
