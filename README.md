@@ -2,6 +2,12 @@
 
 This project is a simple web-based tool that allows freelancers to capture and save client feedback from Upwork as an image. The site ensures that the feedback text is properly formatted and can be saved as a PNG file.
 
+## Features
+- **Real-time Feedback Input**: Users can paste client feedback, and the tool automatically adjusts formatting.
+- **Character Limit Handling**: If feedback exceeds 1008 characters, it is truncated with `...`.
+- **Download as Image**: Uses `html2canvas` to convert the feedback container into an image and save it.
+- **User-friendly UI**: Simple and clean interface with validation for empty feedback.
+
 ## Installation
 1. Clone the repository:
    ```bash
