@@ -2,6 +2,17 @@
 
 This project is a simple web-based tool that allows freelancers to capture and save client feedback from Upwork as an image. The site ensures that the feedback text is properly formatted and can be saved as a PNG file.
 
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/georgegognadze/upworkshare.git
+   ```
+2. Navigate to the project folder:
+   ```bash
+   cd upworkshare
+   ```
+3. Open `index.html` in your browser.
+
 ## Usage
 1. Paste the client’s feedback into the input field.
 2. Click the **Submit** button to preview the formatted feedback.
