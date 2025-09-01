@@ -16,12 +16,22 @@ body {
   color: white;
   font-family: "Neue Montreal", sans-serif;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  height: auto;
-  text-align: left;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
   padding: 27px;
+  padding-bottom: 80px;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  gap: 15px;
 }
 
 .container {
@@ -30,9 +40,14 @@ body {
   height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   text-align: left;
+}
+
+.review__title {
+  padding-top: 27px;
+  padding-left: 3px;
 }
 
 .review__stars {
@@ -56,12 +71,13 @@ body {
   line-height: 1.3;
   max-width: 95%;
   letter-spacing: 1px;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
 }
 
 .review__client {
-  font-family: "Neue Montreal";
-  font-size: 2.0625rem;
-  font-weight: bold;
+  width: 100%;
   margin-top: 33px;
 }
 
@@ -69,31 +85,48 @@ body {
   font-size: 1.7rem;
   font-weight: bold;
   margin-top: 83px;
+  padding-bottom: 27px;
+  padding-left: 3px;
 }
 
-.save-button {
-  margin-top: 40px;
+.save-button,
+.back-button {
+  margin-top: 20px;
   padding: 10px 20px;
   font-size: 1.2rem;
-  background-color: #108a00;
   color: #fff;
   border: none;
   cursor: pointer;
   border-radius: 8px;
 }
 
-.save-button:hover, .feedback-form__submit-button:hover {
+.save-button {
+  background-color: #108a00;
+  margin-top: 40px;
+}
+
+.back-button {
+  background-color: #555;
+}
+
+.save-button:hover,
+.feedback-form__submit-button:hover {
   background-color: #14a800;
 }
 
+.back-button:hover {
+  background-color: #777;
+}
+
 .feedback-form__input {
-  margin: 20px 0;
+  margin: 0;
   padding: 10px;
   font-size: 1rem;
   width: 100%;
-  height: 300px;
+  height: 250px;
   resize: none;
   border-radius: 8px;
+  font-family: inherit;
 }
 
 .feedback-form__submit-button {
@@ -106,24 +139,66 @@ body {
   font-size: 1.2rem;
 }
 
-.feedback-form__submit-button:active, .save-button:active, .feedback-form__submit-button:active {
-  transform: scale(.96);
+.feedback-form__submit-button:active,
+.save-button:active {
+  transform: scale(0.96);
 }
 
-.back-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  background-color: #fff;
-  color: #108a00;
-  border: 2px solid #108a00;
-  cursor: pointer;
-  border-radius: 8px;
+.qr-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  margin-top: 30px;
 }
 
-.back-button:hover {
-  background-color: #f9f9f9;
+.qr-container h4 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.qr-input {
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#qrcode {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  background: white;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  background-color: #001400;
+  z-index: 100;
+}
+
+footer p {
+  margin: 0;
+  color: #ccc;
+}
+
+footer a {
   color: #14a800;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {

@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="./assets/img/favicon.ico" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   </head>
   <body>
     <div class="feedback-form" id="feedback-form">
@@ -16,7 +17,18 @@
         class="feedback-form__input"
         placeholder="Paste the client's feedback here..."
       ></textarea>
-      <button class="feedback-form__submit-button" onclick="submitFeedback()" aria-label="Submit Feedback">
+      <h3>Enter Your Upwork Profile Link:</h3>
+      <input
+        type="url"
+        id="profile-link"
+        class="qr-input"
+        placeholder="Enter your Upwork profile or portfolio link..."
+      />
+      <button
+        class="feedback-form__submit-button"
+        onclick="submitFeedback()"
+        aria-label="Submit Feedback"
+      >
         Submit Feedback
       </button>
     </div>
@@ -35,9 +47,13 @@
         <div class="review__star"></div>
       </div>
       <p id="review-text" class="review__text"></p>
-      <p class="review__client">
+      <div class="review__client">
         <img src="./assets/img/Upwork-client.webp" alt="Upwork Client" />
-      </p>
+      </div>
+      <div class="qr-container">
+        <h4>Hire me:</h4>
+        <div id="qrcode"></div>
+      </div>
       <p class="review__upwork-logo">
         <img src="./assets/img/Upwork-logo.webp" alt="Upwork Logo" />
       </p>
@@ -48,6 +64,19 @@
         Back to Form
       </button>
     </div>
+
+    <footer>
+      <p>
+        Made by
+        <a
+          href="https://georgego.dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >georgego.dev</a
+        >
+      </p>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
