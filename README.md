@@ -1,4 +1,4 @@
-# Upwork Review sharing site
+# Upwork review sharing site
 
 This project is a simple web-based tool that allows freelancers to capture and save client feedback from Upwork as an image. The site ensures that the feedback text is properly formatted and can be saved as a PNG file. Upwork only allows 162 characters in feedback image, and after that, it automatically adds  `...`. This site helps Upwork freelancers capture feedback up to 1008 characters for their portfolio, sharing with friends, or networking purposes.
 
